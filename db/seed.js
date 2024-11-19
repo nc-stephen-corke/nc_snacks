@@ -64,9 +64,6 @@ exports.seed = ({ categoriesData, snacksData, vendingMachineData }) => {
       );
       return db.query(queryStr);
     })
-    .then(() => {
-      return db.end();
-    })
     .catch((err) => {
       console.log(err);
     });

@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest",
+    "test": "PGDATABASE=nc_snacks jest",
     "seed": "PGDATABASE=nc_snacks node db/run-seed.js",
-    "setup-db": "psql -f db/setup.sql"
+    "setup-db": "psql -f db/setup.sql",
+    "dev": "node listen.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,12 @@
   },
   "homepage": "https://github.com/northcoders/nc_snacks#readme",
   "dependencies": {
+    "express": "^4.21.1",
     "pg": "^8.11.3",
     "pg-format": "^1.0.4"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
