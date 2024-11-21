@@ -1,13 +1,24 @@
-const { selectSnackById } = require('../models/snacks.models');
+const { selectSnackById, insertSnack } = require("../models/snacks.models");
 
 exports.getApi = (req, res) => {
-  res.status(200).send({ msg: 'all okay!' });
+	res.status(200).send({ msg: "all okay!" });
 };
 
-exports.getSnackById = (req, res) => {
-  const { id } = req.params;
+exports.getSnackById = (req, res, next) => {
+	const { snack_id } = req.params;
 
-  selectSnackById(id).then((snack) => {
-    res.status(200).send({ snack });
-  });
+	selectSnackById(snack_id)
+		.then((snack) => {
+			res.status(200).send({ snack });
+		})
+		.catch(next);
+};
+
+exports.postSnack = (req, res, next) => {
+	const newSnack = req.body;
+	insertSnack(newSnack)
+		.then((insertedSnack) => {
+			res.status(201).send({ snack: insertedSnack });
+		})
+		.catch(next);
 };

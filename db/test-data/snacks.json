@@ -1,0 +1,38 @@
+[
+	{
+		"snack_name": "snack a",
+		"snack_description": "snack description a",
+		"price_in_pence": 100,
+		"category": "category b"
+	},
+	{
+		"snack_name": "snack b",
+		"snack_description": "snack description b",
+		"price_in_pence": 10,
+		"category": "category b"
+	},
+	{
+		"snack_name": "snack d",
+		"snack_description": "snack description d",
+		"price_in_pence": 120,
+		"category": "category c"
+	},
+	{
+		"snack_name": "snack e",
+		"snack_description": "snack description e",
+		"price_in_pence": 70,
+		"category": "category a"
+	},
+	{
+		"snack_name": "snack c",
+		"snack_description": "snack description c",
+		"price_in_pence": 150,
+		"category": "category a"
+	},
+	{
+		"snack_name": "snack f",
+		"snack_description": "snack description f",
+		"price_in_pence": 200,
+		"category": "category b"
+	}
+]
